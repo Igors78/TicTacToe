@@ -10,7 +10,10 @@
 
 ## Live Demo
 
-[Live Demo Link](https://repl.it/@Igors78/enumerablesrb#main.rb)
+[Live Demo Link](https://repl.it/@Igors78/TicTacToe#bin/main)
+- Run the respective command ```git checkout milestone2_user_interface``` in repl terminal
+to navigate to working branch.
+- Run ```bin/main```
 
 ## Built with
 
