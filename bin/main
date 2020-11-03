@@ -1,45 +1,61 @@
 #!/usr/bin/env ruby
-name = ARGV[0]
-linewidth = 60
-if name
-  puts
-  puts "Hello, #{name}!".center(linewidth)
-  puts
-else
-  puts
-  puts "Hello, darling!".center(linewidth)
-  puts
-end
 
-class Board
+class Game
   def initialize
-    @cell1 = " "
-    @cell2 = " "
-    @cell3 = " "
-    @cell4 = " "
-    @cell5 = " "
-    @cell6 = " "
-    @cell7 = " "
-    @cell8 = " "
-    @cell9 = " "
+    @board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+    @turn = "x"
   end
 
   def boarding
+    system "clear"
     linewidth = 60
     puts "Welcome to Tic Tac Toe".center(linewidth)
-    puts
+
     puts "Playing Board".ljust(linewidth / 2) + "Reference board".rjust(linewidth / 2)
-    puts
+
     puts "-------------".ljust(linewidth / 2) + "-------------".rjust(linewidth / 2)
-    puts "| #{@cell1} | #{@cell2} | #{@cell3} |".ljust(linewidth / 2) + "| 1 | 2 | 3 |".rjust(linewidth / 2)
+    puts "| #{@board[0]} | #{@board[1]} | #{@board[2]} |".ljust(linewidth / 2) + "| 1 | 2 | 3 |".rjust(linewidth / 2)
     puts "-------------".ljust(linewidth / 2) + "-------------".rjust(linewidth / 2)
-    puts "| #{@cell4} | #{@cell5} | #{@cell6} |".ljust(linewidth / 2) + "| 4 | 5 | 6 |".rjust(linewidth / 2)
+    puts "| #{@board[3]} | #{@board[4]} | #{@board[5]} |".ljust(linewidth / 2) + "| 4 | 5 | 6 |".rjust(linewidth / 2)
     puts "-------------".ljust(linewidth / 2) + "-------------".rjust(linewidth / 2)
-    puts "| #{@cell7} | #{@cell8} | #{@cell9} |".ljust(linewidth / 2) + "| 7 | 8 | 9 |".rjust(linewidth / 2)
+    puts "| #{@board[6]} | #{@board[7]} | #{@board[8]} |".ljust(linewidth / 2) + "| 7 | 8 | 9 |".rjust(linewidth / 2)
     puts "-------------".ljust(linewidth / 2) + "-------------".rjust(linewidth / 2)
-    puts
+
+    self.fill_the_board
+  end
+
+  def fill_the_board
+    if @turn == "x"
+      puts "Player 1 choice (1-9)?:"
+      player1 = gets.chomp.to_i
+      self.check_entry(player1)
+      self.boarding
+    else
+      puts "Player 2 choice (1-9)?:"
+      player2 = gets.chomp.to_i
+      self.check_entry(player2)
+      self.boarding
+    end
+  end
+
+  def check_entry(entry)
+    if entry > 9 || entry < 1 || !entry.is_a?(Numeric)
+      puts "Range from 1 to 9"
+      sleep 1
+      self.boarding
+    elsif @board[entry - 1] != " "
+      puts "Cell filled already"
+      sleep 1
+      self.boarding
+    elsif @turn == "x"
+      @board[entry - 1] = "X"
+      @turn = "o"
+    else
+      @board[entry - 1] = "O"
+      @turn = "x"
+    end
   end
 end
 
-play = Board.new
+play = Game.new
 play.boarding
