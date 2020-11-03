@@ -1,14 +1,4 @@
 #!/usr/bin/env ruby
-puts "Tic-tac-toe (American English), noughts and crosses (Commonwealth English),
- or Xs and Os, is a paper-and-pencil game for two players, X and O, who take
- turns marking the spaces in a 3×3 grid. The player who succeeds in placing
- three of their marks in a horizontal, vertical, or diagonal row is the winner.
- It is a solved game with a forced draw assuming best play from both players.
- Please follow the prompt to enter your move.
- Your cross (X) or your (O) will be placed in the cell with corresponding number you enter,
- check reference board.
- Press ENTER to start"
-gets
 
 class Game
   def initialize
@@ -51,11 +41,11 @@ class Game
 
   def check_entry(entry)
     if entry > 9 || entry < 1 || !entry.is_a?(Numeric)
-      puts "Range from 1 to 9"
+      puts "Invalid move, please choose a number between 1 and 9"
       sleep 1
 
     elsif @board[entry - 1] != " "
-      puts "Cell filled already"
+      puts "Invalid move. Cell filled already. Choose another cell."
       sleep 1
 
     elsif @turn == "x"

@@ -5,7 +5,14 @@
 ![screenshot](./img/screenshot.png)
 
 # Getting Started
-
+Tic-tac-toe (American English), noughts and crosses (Commonwealth English),
+ or Xs and Os, is a paper-and-pencil game for two players, X and O, who take
+ turns marking the spaces in a 3×3 grid. The player who succeeds in placing
+ three of their marks in a horizontal, vertical, or diagonal row is the winner.
+ It is a solved game with a forced draw assuming best play from both players.
+ Please follow the prompt to enter your move.
+ Your cross (X) or your (O) will be placed in the cell with corresponding number you enter,
+ check reference board.
 
 
 ## Live Demo
@@ -38,5 +45,9 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Ruby docmentation
+- Ruby documentation
 - [Ruby Guides](https://www.rubyguides.com/)
+
+## 📝 License
+
+This project is [UNLicense](./LICENSE) licensed.
