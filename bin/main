@@ -1,29 +1,43 @@
 #!/usr/bin/env ruby
 name = ARGV[0]
-$linewidth = 60
+linewidth = 60
 if name
   puts
-  puts "Hello, #{name}!".center($linewidth)
+  puts "Hello, #{name}!".center(linewidth)
   puts
 else
   puts
-  puts "Hello, darling!".center($linewidth)
+  puts "Hello, darling!".center(linewidth)
   puts
 end
 
 class Board
+  def initialize
+    @cell1 = " "
+    @cell2 = " "
+    @cell3 = " "
+    @cell4 = " "
+    @cell5 = " "
+    @cell6 = " "
+    @cell7 = " "
+    @cell8 = " "
+    @cell9 = " "
+  end
+
   def boarding
-    puts "Welcome to Tic Tac Toe".center($linewidth)
+    linewidth = 60
+    puts "Welcome to Tic Tac Toe".center(linewidth)
     puts
-    puts "Playing Board".ljust($linewidth / 2) + "Reference board".rjust($linewidth / 2)
+    puts "Playing Board".ljust(linewidth / 2) + "Reference board".rjust(linewidth / 2)
     puts
-    puts "-------------".ljust($linewidth / 2) + "-------------".rjust($linewidth / 2)
-    puts "|   |   |   |".ljust($linewidth / 2) + "| 1 | 2 | 3 |".rjust($linewidth / 2)
-    puts "-------------".ljust($linewidth / 2) + "-------------".rjust($linewidth / 2)
-    puts "|   |   |   |".ljust($linewidth / 2) + "| 4 | 5 | 6 |".rjust($linewidth / 2)
-    puts "-------------".ljust($linewidth / 2) + "-------------".rjust($linewidth / 2)
-    puts "|   |   |   |".ljust($linewidth / 2) + "| 7 | 8 | 9 |".rjust($linewidth / 2)
-    puts "-------------".ljust($linewidth / 2) + "-------------".rjust($linewidth / 2)
+    puts "-------------".ljust(linewidth / 2) + "-------------".rjust(linewidth / 2)
+    puts "| #{@cell1} | #{@cell2} | #{@cell3} |".ljust(linewidth / 2) + "| 1 | 2 | 3 |".rjust(linewidth / 2)
+    puts "-------------".ljust(linewidth / 2) + "-------------".rjust(linewidth / 2)
+    puts "| #{@cell4} | #{@cell5} | #{@cell6} |".ljust(linewidth / 2) + "| 4 | 5 | 6 |".rjust(linewidth / 2)
+    puts "-------------".ljust(linewidth / 2) + "-------------".rjust(linewidth / 2)
+    puts "| #{@cell7} | #{@cell8} | #{@cell9} |".ljust(linewidth / 2) + "| 7 | 8 | 9 |".rjust(linewidth / 2)
+    puts "-------------".ljust(linewidth / 2) + "-------------".rjust(linewidth / 2)
+    puts
   end
 end
 
