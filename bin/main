@@ -1,8 +1,31 @@
 #!/usr/bin/env ruby
 name = ARGV[0]
+$linewidth = 60
 if name
-  puts "Hello, #{name}!"
+  puts
+  puts "Hello, #{name}!".center($linewidth)
+  puts
 else
-  puts "Hello, darling!"
+  puts
+  puts "Hello, darling!".center($linewidth)
+  puts
 end
-puts "Welcome to Tic Tac Toe"
+
+class Board
+  def boarding
+    puts "Welcome to Tic Tac Toe".center($linewidth)
+    puts
+    puts "Playing Board".ljust($linewidth / 2) + "Reference board".rjust($linewidth / 2)
+    puts
+    puts "-------------".ljust($linewidth / 2) + "-------------".rjust($linewidth / 2)
+    puts "|   |   |   |".ljust($linewidth / 2) + "| 1 | 2 | 3 |".rjust($linewidth / 2)
+    puts "-------------".ljust($linewidth / 2) + "-------------".rjust($linewidth / 2)
+    puts "|   |   |   |".ljust($linewidth / 2) + "| 4 | 5 | 6 |".rjust($linewidth / 2)
+    puts "-------------".ljust($linewidth / 2) + "-------------".rjust($linewidth / 2)
+    puts "|   |   |   |".ljust($linewidth / 2) + "| 7 | 8 | 9 |".rjust($linewidth / 2)
+    puts "-------------".ljust($linewidth / 2) + "-------------".rjust($linewidth / 2)
+  end
+end
+
+play = Board.new
+play.boarding
