@@ -80,6 +80,5 @@ class Game
   end
 end
 
-p board
 playing = Game.new
 playing.start_game
