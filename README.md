@@ -18,7 +18,7 @@ Tic-tac-toe (American English), noughts and crosses (Commonwealth English),
 ## Live Demo
 
 [Live Demo Link](https://repl.it/@Igors78/TicTacToe#bin/main)
-- Run the respective command ```git checkout milestone2_user_interface``` in repl terminal
+- Run the respective command ```git checkout milestone3_game_logic``` in repl terminal
 to navigate to working branch.
 - Run ```bin/main```
 
