@@ -11,7 +11,7 @@ module Winlines
   end
 
   def line2_5_check(arr)
-    arr[3] == arr[4] && arr[4] == arr[5] || arr[1] == arr[4] && arr[4] == arr[1]
+    arr[3] == arr[4] && arr[4] == arr[5] || arr[1] == arr[4] && arr[4] == arr[7]
   end
 
   def line3_6_check(arr)
