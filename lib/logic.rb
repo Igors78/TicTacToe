@@ -21,15 +21,4 @@ module Winlines
   def line7_8_check(arr)
     arr[2] == arr[4] && arr[4] == arr[6] || arr[0] == arr[4] && arr[4] == arr[8]
   end
-
-  def who_won(fig)
-    case fig
-    when "X"
-      puts "Player 1 with (X) Wins"
-      exit
-    when "O"
-      puts "Player 2 with (O) Wins"
-      exit
-    end
-  end
 end
