@@ -2,7 +2,7 @@
 - In this project, the student builds a Tic Tac Toe game. The main goal is to put into practice the main concepts of Object Oriented Programming. Particularly, classes and access to their attributes.
 
 
-![screenshot](./img/screenshot.png)
+![screenshot](screenshot.png)
 
 # Getting Started
 Tic-tac-toe (American English), noughts and crosses (Commonwealth English),
