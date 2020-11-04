@@ -18,9 +18,49 @@ Tic-tac-toe (American English), noughts and crosses (Commonwealth English),
 ## Live Demo
 
 [Live Demo Link](https://repl.it/@Igors78/TicTacToe#bin/main)
-- Run the respective command ```git checkout milestone3_game_logic``` in repl terminal
-to navigate to working branch.
-- Run ```bin/main```
+- Run the respective command ```bin/main``` in repl terminal
+to start the game.
+```
+Reference board
+-------------
+| 1 | 2 | 3 |
+-------------
+| 4 | 5 | 6 |
+-------------
+| 7 | 8 | 9 |
+-------------
+Playing Board
+-------------
+|   |   |   |
+-------------
+|   |   |   |
+-------------
+|   |   |   |
+-------------
+Player 1 (X) choice (1-9)?:
+```
+
+- Follow the prompt as above to enter your respective cross or naught in the playing board, see numbers in reference board for easy navigation.
+- Change your moves as prompted from one player to another.
+- You will be notified who has won or if there is a tie.
+
+## On your Computer
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+- Any PC or device with internet connection and ability to use command line terminal
+### Setup
+- Open the command line terminal
+### Install
+- Go to your preferred directory
+- Run  ```git clone https://github.com/Igors78/TicTacToe.git``` command
+### Usage
+- Navigate to respective folder (TicTacToe) and type ```bin/main``` in your terminal.
+- Follow the instructions above for the live link.
+### Run tests
+- Tests passed can be found  [here](https://github.com/Igors78/TicTacToe/pulls)
+
+
 
 ## Built with
 
