@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
+require_relative '../lib/logic'
 
-class Game
+class Board
   def initialize
     @board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
     @turn = "x"
@@ -27,11 +28,11 @@ class Game
 
   def fill_the_board
     if @turn == "x"
-      puts "Player 1 choice (1-9)?:"
+      puts "Player 1 (X) choice (1-9)?:"
       player1 = gets.chomp.to_i
       check_entry(player1)
     else
-      puts "Player 2 choice (1-9)?:"
+      puts "Player 2 (O) choice (1-9)?:"
       player2 = gets.chomp.to_i
       check_entry(player2)
     end
@@ -70,12 +71,26 @@ class Game
     end
   end
 
-  def start_game
-    system "clear"
-    boarding
-    check_fill
+  def who_won(fig)
+    case fig
+    when "X"
+      puts "Player 1 with (X) Wins"
+      exit
+    when "O"
+      puts "Player 2 with (O) Wins"
+      exit
+    end
   end
 end
 
-playing = Game.new
-playing.start_game
+class Game < Board
+  include Winlines
+
+  def start_game
+    boarding
+    check_for_winner(@board)
+    check_fill
+  end
+end
+play = Game.new
+play.start_game
