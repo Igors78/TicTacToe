@@ -1,5 +1,5 @@
-require './bin/main'
-require './lib/logic'
+require_relative  './bin/main'
+require_relative './lib/logic'
 
 describe Board do
 end
