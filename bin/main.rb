@@ -4,8 +4,8 @@ require_relative '../lib/logic'
 class Board
   attr_reader :board
 
-  def initialize
-    @board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+  def initialize(board = [" ", " ", " ", " ", " ", " ", " ", " ", " "])
+    @board = board
     @turn = "x"
   end
 
@@ -94,5 +94,5 @@ class Game < Board
     check_fill
   end
 end
-play = Game.new
-play.start_game
+# play = Game.new
+# play.start_game

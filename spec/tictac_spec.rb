@@ -1,6 +1,6 @@
-require '../bin/main'
-require '../lib/logic'
-describe Game do
+require './bin/main'
+require './lib/logic'
+describe Winlines do
   let(:win1) { [1, 1, 1, 0, 0, 0, 0, 0, 0] }
   let(:win2) { [0, 0, 0, 1, 1, 1, 0, 0, 0] }
   let(:win3) { [0, 0, 0, 0, 0, 0, 1, 1, 1] }
@@ -9,11 +9,13 @@ describe Game do
   let(:win6) { [0, 0, 1, 0, 0, 1, 0, 0, 1] }
   let(:win7) { [0, 0, 1, 0, 1, 0, 1, 0, 0] }
   let(:win8) { [1, 0, 0, 0, 1, 0, 0, 0, 1] }
-
-  context 'When boarding completed' do
-    it 'Should call check_for_winner' do
-      p playgame.board
-      expect(playgame).to receive(:boarding)
+  let(:playgame) { Game.new }
+  context 'When start the game' do
+    it 'Should call boarding' do
+      expect(playgame.start_game).to receive(:boarding)
+    end
+    it 'Should call check for winner' do
+      expect(playgame.boarding).to receive(:check_for_winner)
     end
   end
 end
