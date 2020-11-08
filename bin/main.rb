@@ -2,6 +2,8 @@
 require_relative '../lib/logic'
 
 class Board
+  attr_reader :board
+
   def initialize
     @board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
     @turn = "x"
