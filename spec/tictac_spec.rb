@@ -1,5 +1,5 @@
-require '../bin/main'
-require '../lib/logic'
+require_relative '../bin/main'
+require_relative '../lib/logic'
 describe Winlines do
   let(:win1) { [1, 1, 1, 0, 0, 0, 0, 0, 0] }
   let(:win2) { [0, 0, 0, 1, 1, 1, 0, 0, 0] }
