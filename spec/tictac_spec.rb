@@ -162,10 +162,12 @@ describe Game do
   describe '#who_won' do
     context 'who won' do
       it 'checks who won' do
-        mock = double('testing')
-        expect(mock).to receive(:who_won).with(any_args)
-        Game.new(mock)
-        mock.who_won("O")
+        test = Game.new
+        expect(test.who_won(" ")).to eq(nil)
+      end
+      it 'checks who won' do
+        test = Game.new
+        expect(test.who_won("X")).to receive(:print_winner)
       end
     end
   end

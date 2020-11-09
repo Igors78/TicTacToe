@@ -76,12 +76,15 @@ class Board
   def who_won(fig)
     case fig
     when "X"
-      puts "Player 1 with (X) Wins"
-      exit
+      print_winner("X")
     when "O"
-      abort "Player 2 with (O) Wins"
+      print_winner("O")
 
     end
+  end
+
+  def print_winner(char)
+    abort "#{char} Player Wins"
   end
 end
 
