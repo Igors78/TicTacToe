@@ -164,7 +164,7 @@ describe Game do
       it 'checks who won' do
         mock = double('testing')
         expect(mock).to receive(:who_won).with(any_args)
-        test = Game.new(mock)
+        Game.new(mock)
         mock.who_won("O")
       end
     end
