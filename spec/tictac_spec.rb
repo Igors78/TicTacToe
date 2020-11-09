@@ -159,11 +159,20 @@ describe Game do
     context 'who won' do
       it 'checks who won' do
         test = Game.new
-        expect(test.who_won(" ")).to eq(nil)
+        expect(test).to receive(:print_winner).with(any_args)
+        test.who_won("X")
       end
+
       it 'checks who won' do
         test = Game.new
-        expect(test.who_won("X")).to receive(:print_winner)
+        expect(test).to receive(:print_winner).with(any_args)
+        test.who_won("O")
+      end
+
+      it 'checks who won' do
+        test = Game.new
+        expect(test).not_to receive(:print_winner).with(any_args)
+        test.who_won(" ")
       end
     end
   end
