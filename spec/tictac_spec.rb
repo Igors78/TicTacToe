@@ -189,13 +189,13 @@ describe Game do
       end
     end
   end
- # describe '#fill_the_board' do
-    context 'Should check entry' do
-      it 'Should call check_entry' do
-        test = Game.new
-        expect(test).to receive(:check_entry)
-        test.fill_the_board
-      end
-    end
-  end
+  # describe '#fill_the_board' do
+  #   context 'Should check entry' do
+  #     it 'Should call check_entry' do
+  #       test = Game.new
+  #       expect(test).to receive(:check_entry)
+  #       test.fill_the_board
+  #     end
+  #   end
+  # end
 end
