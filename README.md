@@ -18,7 +18,7 @@ Tic-tac-toe (American English), noughts and crosses (Commonwealth English),
 ## Live Demo
 
 [Live Demo Link](https://repl.it/@Igors78/TicTacToe#bin/main)
-- Run the respective command ```bin/main``` in repl terminal
+- Run the respective command ```bin/main.rb``` in repl terminal
 to start the game.
 ```
 Reference board
@@ -55,7 +55,7 @@ To get a local copy up and running follow these simple example steps.
 - Go to your preferred directory
 - Run  ```git clone https://github.com/Igors78/TicTacToe.git``` command
 ### Usage
-- Navigate to respective folder (TicTacToe) and type ```bin/main``` in your terminal.
+- Navigate to respective folder (TicTacToe) and type ```bin/main.rb``` in your terminal.
 - Follow the instructions above for the live link.
 ### Run tests
 - Tests passed can be found  [here](https://github.com/Igors78/TicTacToe/pulls)

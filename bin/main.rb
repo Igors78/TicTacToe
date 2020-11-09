@@ -93,5 +93,4 @@ class Game < Board
   end
 end
 
-# play = Game.new
-# play.start_game
+# Game.new.start_game
