@@ -173,10 +173,19 @@ describe Game do
       end
     end
   end
-  describe 'check_fill' do
-    context 'When block is given' do
-      it 'Should return original array' do
-        expect(test_arr.my_each { |n| n + 1 }).to eq(test_arr)
+  describe '#check_fill' do
+    context 'When there is free cell call #fill_the_board' do
+      it 'Should call #fill_the_board' do
+        test = Game.new
+        expect(test).to receive(:fill_the_board)
+        test.check_fill
+      end
+
+      it 'Should not call #fill_the_board' do
+        test = Game.new([1, 1, 1, 3, 4, 5, 6, 7, 8])
+
+        expect(test).not_to receive(:fill_the_board).with(any_args)
+        test.check_fill
       end
     end
   end
