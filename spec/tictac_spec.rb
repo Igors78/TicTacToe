@@ -41,6 +41,8 @@ describe Winlines do
         expect(testgame).to receive(:who_won).with(any_args)
         testgame.check_for_winner(win4)
       end
+    end
+    context 'Winning combo' do
       it 'should call #who_won when winning combination' do
         testgame = Game.new
         expect(testgame).to receive(:who_won).with(any_args)
@@ -84,6 +86,8 @@ describe Winlines do
         expect(testgame).not_to receive(:who_won).with(any_args)
         testgame.check_for_winner(nowin4)
       end
+    end
+    context 'Not winning combo' do
       it 'should not call #who_won when combination is not winning' do
         testgame = Game.new
         expect(testgame).not_to receive(:who_won).with(any_args)
