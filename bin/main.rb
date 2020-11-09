@@ -1,9 +1,11 @@
 #!/usr/bin/env ruby
-require_relative '../lib/logic'
+require_relative "../lib/logic"
 
 class Board
-  def initialize
-    @board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+  attr_reader :board
+
+  def initialize(board = [" ", " ", " ", " ", " ", " ", " ", " ", " "])
+    @board = board
     @turn = "x"
   end
 
@@ -44,19 +46,15 @@ class Board
     if entry > 9 || entry < 1 || !entry.is_a?(Numeric)
       puts "Invalid move, please choose a number between 1 and 9"
       sleep 1
-
     elsif @board[entry - 1] != " "
       puts "Invalid move. Cell filled already. Choose another cell."
       sleep 1
-
     elsif @turn == "x"
       @board[entry - 1] = "X"
       @turn = "o"
-
     else
       @board[entry - 1] = "O"
       @turn = "x"
-
     end
     boarding
   end
@@ -74,12 +72,14 @@ class Board
   def who_won(fig)
     case fig
     when "X"
-      puts "Player 1 with (X) Wins"
-      exit
+      print_winner("X")
     when "O"
-      puts "Player 2 with (O) Wins"
-      exit
+      print_winner("O")
     end
+  end
+
+  def print_winner(char)
+    abort "#{char} Player Wins"
   end
 end
 
@@ -92,5 +92,5 @@ class Game < Board
     check_fill
   end
 end
-play = Game.new
-play.start_game
+
+# Game.new.start_game
