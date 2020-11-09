@@ -180,4 +180,11 @@ describe Game do
       end
     end
   end
+  describe 'check_fill' do
+    context 'When block is given' do
+      it 'Should return original array' do
+        expect(test_arr.my_each { |n| n + 1 }).to eq(test_arr)
+      end
+    end
+  end
 end
