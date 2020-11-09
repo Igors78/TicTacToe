@@ -74,9 +74,6 @@ To get a local copy up and running follow these simple example steps.
 ### Run tests
 - Tests passed can be found  [here](https://github.com/Igors78/TicTacToe/pulls) by clicking on "Closed" pull requests, choosing last pull request, click on green tick next to last commit and "Details" next to test suite you want to see.
 
-### Run tests
-
-- Tests passed can be found [here](https://github.com/Igors78/TicTacToe/pulls)
 
 ## Built with
 
