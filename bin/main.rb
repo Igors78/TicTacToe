@@ -93,4 +93,4 @@ class Game < Board
   end
 end
 
-Game.new.start_game
+# Game.new.start_game
