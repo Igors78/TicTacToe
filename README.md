@@ -58,7 +58,7 @@ To get a local copy up and running follow these simple example steps.
 - Navigate to respective folder (TicTacToe) and type ```bin/main.rb``` in your terminal.
 - Follow the instructions above for the live link.
 ### Run tests
-- Tests passed can be found  [here](https://github.com/Igors78/TicTacToe/pulls)
+- Tests passed can be found  [here](https://github.com/Igors78/TicTacToe/pulls) by clicking on "Closed" pull requests, choosing last pull request, click on green tick next to last commit and "Details" next to test suite you want to see.
 
 
 
