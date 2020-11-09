@@ -155,13 +155,11 @@ end
 describe Game do
   describe '#who_won' do
     context 'who won' do
-      instance = Game.new
-
       it 'checks who won' do
-        expect(instance.who_won("O")).to output("Player 2 with (O) Wins").to_stdout
-      end
-      it 'checks who won' do
-        expect(instance.who_won("X")).to output("Player 1 with (X) Wins").to_stdout
+        mock = double('testing')
+        expect(mock).to receive(:who_won).with(any_args)
+        test = Game.new(mock)
+        test.who_won("O")
       end
     end
   end
