@@ -131,6 +131,7 @@ RSpec.describe Board do
       end
     end
   end
+
   context "check for check_fill" do
     describe "#check_fill" do
       it "check if two strings are equal" do
@@ -148,14 +149,7 @@ RSpec.describe Board do
       end
     end
   end
-  context "check for fill_the_board" do
-    describe "#fill_the_board" do
-      it "check if two players have filled the board" do
-        dbl = double(board)
-        allow(dbl).to receive(:fill_the_board).and_return("The board is filled out")
-      end
-    end
-  end
+
 end
 
 describe Game do
