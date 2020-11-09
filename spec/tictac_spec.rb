@@ -1,5 +1,5 @@
-require_relative "../bin/main.rb"
-require_relative "../lib/logic.rb"
+require_relative '../bin/main'
+require_relative '../lib/logic'
 
 describe Winlines do
   let(:win1) { [1, 1, 1, 3, 4, 5, 6, 7, 8] }
@@ -153,6 +153,21 @@ RSpec.describe Board do
       it "check if two players have filled the board" do
         dbl = double(board)
         allow(dbl).to receive(:fill_the_board).and_return("The board is filled out")
+      end
+    end
+  end
+end
+
+describe Game do
+  describe '#who_won' do
+    context 'who won' do
+      instance = Game.new
+
+      it 'checks who won' do
+        expect(instance.who_won("O")).to output("Player 2 with (O) Wins").to_stdout
+      end
+      it 'checks who won' do
+        expect(instance.who_won("X")).to output("Player 1 with (X) Wins").to_stdout
       end
     end
   end

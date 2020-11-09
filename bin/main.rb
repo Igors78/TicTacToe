@@ -79,8 +79,8 @@ class Board
       puts "Player 1 with (X) Wins"
       exit
     when "O"
-      puts "Player 2 with (O) Wins"
-      exit
+      abort "Player 2 with (O) Wins"
+
     end
   end
 end
