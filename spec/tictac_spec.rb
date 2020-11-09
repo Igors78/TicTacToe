@@ -17,7 +17,7 @@ describe Winlines do
   let(:nowin5) { [6, 1, 7, 8, 0, 6, 8, 1, 0] }
   let(:nowin6) { [1, 2, 1, 3, 4, 0, 5, 6, 1] }
   let(:nowin7) { [3, 4, 1, 5, 1, 6, 0, 7, 8] }
-  let(:nowin8) { [1, 3, 4, 5, 1, 6, 7, 8, 0] }
+  let(:nowin8) { [1, 3, 4, 5, 1, 6, 7, 8, 0,] }
 
   describe "#check_for_winner" do
     context "When combo is winning" do
@@ -122,7 +122,7 @@ RSpec.describe Board do
       7 => "X", 8 => "0", 9 => "O"
     )
   end
-
+   
   context "check for tie" do
     describe "#tie" do
       it "should return tie if no win" do
@@ -131,11 +131,12 @@ RSpec.describe Board do
       end
     end
   end
+
   context "check for check_fill" do
     describe "#check_fill" do
       it "check if two strings are equal" do
         dbl = double(board)
-        allow(dbl).to receive(:check_fill).and_return("trings are equal")
+        allow(dbl).to receive(:check_fill).and_return("strings are equal")
       end
     end
   end
@@ -148,15 +149,10 @@ RSpec.describe Board do
       end
     end
   end
-  context "check for fill_the_board" do
-    describe "#fill_the_board" do
-      it "check if two players have filled the board" do
-        dbl = double(board)
-        allow(dbl).to receive(:fill_the_board).and_return("The board is filled out")
-      end
-    end
-  end
+
 end
+
+
 
 describe Game do
   describe '#who_won' do
