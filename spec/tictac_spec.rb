@@ -136,7 +136,7 @@ RSpec.describe Board do
     describe "#check_fill" do
       it "check if two strings are equal" do
         dbl = double(board)
-        allow(dbl).to receive(:check_fill).and_return("trings are equal")
+        allow(dbl).to receive(:check_fill).and_return("strings are equal")
       end
     end
   end
@@ -151,6 +151,8 @@ RSpec.describe Board do
   end
 
 end
+
+
 
 describe Game do
   describe '#who_won' do
