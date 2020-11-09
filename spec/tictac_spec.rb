@@ -127,15 +127,32 @@ RSpec.describe Board do
     describe "#tie" do
       it "should return tie if no win" do
         dbl = double(board)
-        allow(dbl).to receive(:tie).and_return("Game is tie")
+        allow(dbl).to receive(:tie).and_return("It's a tie")
       end
     end
   end
-  context "check for display" do
-    describe "#display" do
+  context "check for check_fill" do
+    describe "#check_fill" do
       it "check if two strings are equal" do
         dbl = double(board)
-        allow(dbl).to receive(:display).and_return(@grid)
+        allow(dbl).to receive(:check_fill).and_return("trings are equal")
+      end
+    end
+  end
+
+  context "check for check_entry" do
+    describe "#check_entry" do
+      it "check if two players have invalid move" do
+        dbl = double(board)
+        allow(dbl).to receive(:check_entry).and_return("invalid move")
+      end
+    end
+  end
+  context "check for fill_the_board" do
+    describe "#fill_the_board" do
+      it "check if two players have filled the board" do
+        dbl = double(board)
+        allow(dbl).to receive(:fill_the_board).and_return("The board is filled out")
       end
     end
   end
