@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative '../lib/logic'
+require_relative "../lib/logic"
 
 class Board
   attr_reader :board
@@ -46,19 +46,15 @@ class Board
     if entry > 9 || entry < 1 || !entry.is_a?(Numeric)
       puts "Invalid move, please choose a number between 1 and 9"
       sleep 1
-
     elsif @board[entry - 1] != " "
       puts "Invalid move. Cell filled already. Choose another cell."
       sleep 1
-
     elsif @turn == "x"
       @board[entry - 1] = "X"
       @turn = "o"
-
     else
       @board[entry - 1] = "O"
       @turn = "x"
-
     end
     boarding
   end
@@ -79,7 +75,6 @@ class Board
       print_winner("X")
     when "O"
       print_winner("O")
-
     end
   end
 
@@ -97,5 +92,6 @@ class Game < Board
     check_fill
   end
 end
+
 # play = Game.new
 # play.start_game

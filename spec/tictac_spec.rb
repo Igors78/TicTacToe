@@ -17,7 +17,7 @@ describe Winlines do
   let(:nowin5) { [6, 1, 7, 8, 0, 6, 8, 1, 0] }
   let(:nowin6) { [1, 2, 1, 3, 4, 0, 5, 6, 1] }
   let(:nowin7) { [3, 4, 1, 5, 1, 6, 0, 7, 8] }
-  let(:nowin8) { [1, 3, 4, 5, 1, 6, 7, 8, 0] }
+  let(:nowin8) { [1, 3, 4, 5, 1, 6, 7, 8, 0,] }
 
   describe "#check_for_winner" do
     context "When combo is winning" do
@@ -122,7 +122,7 @@ RSpec.describe Board do
       7 => "X", 8 => "0", 9 => "O"
     )
   end
-
+   
   context "check for tie" do
     describe "#tie" do
       it "should return tie if no win" do
