@@ -189,7 +189,7 @@ describe Game do
       end
     end
   end
-  describe '#fill_the_board' do
+ # describe '#fill_the_board' do
     context 'Should check entry' do
       it 'Should call check_entry' do
         test = Game.new
